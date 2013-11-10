@@ -28,7 +28,7 @@ define(['require'], function(require) {
 
         domEl.innerHTML = html;
 
-        var go_button = div.getElementsByClassName("flat-button")[0];
+        var go_button = domEl.getElementsByClassName("flat-button")[0];
         go_button.addEventListener("click",function(e) {
             console.log ("Clicked button", e.target.id);
         });
@@ -40,8 +40,9 @@ define(['require'], function(require) {
     
     var initPlugin = function(initArgs) {
         var args = initArgs;
-                
-        var resList = [ './style.css!text',
+          
+        // TODO *DON'T* USE CSS HERE IN PRODUCTION      
+        var resList = [ './style.css!css',
                         './template.html!text'
                       ];
 

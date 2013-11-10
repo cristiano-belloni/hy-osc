@@ -1,11 +1,11 @@
-.plugin {
+.osc-container {
   background: black;
-  width: 410px;
+  /*width: 410px;
   height: 136px;
-  overflow: hidden;
+  overflow: hidden;*/
 }
 
-.dropdown select {
+.dropdown-osc select {
    background: transparent;
    color: whitesmoke;
    width: 120px;
@@ -16,7 +16,7 @@
     -webkit-appearance: none;
 }
 
-.dropdown {
+.dropdown-osc {
    top: 88px;
    left: 28px;
    position: absolute;
@@ -37,6 +37,7 @@
   width: 80px;
   height: 34px;
   font-size: 16px;
+  text-align: center;
 }
 
 .go-button {
