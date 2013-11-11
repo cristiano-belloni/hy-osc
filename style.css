@@ -17,7 +17,7 @@
 }
 
 .dropdown-osc {
-   top: 88px;
+   top: 80px;
    left: 28px;
    position: absolute;
    width: 120px;
@@ -28,7 +28,7 @@
 }
 
 .frequency-input {
-  top: 27px;
+  top: 19px;
   left: 28px;
   position: absolute;
 }
@@ -41,7 +41,7 @@
 }
 
 .go-button {
-  top: 45px;
+  top: 37px;
   left: 308px;
   position: absolute;
 }
@@ -69,7 +69,7 @@
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	border-radius: 3px;
-	font-family: 'Helvetica Neue', Helvetica, sans-serif;
+	font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 .flat-button:active {
 	padding-top: 23px;
@@ -139,37 +139,37 @@
 }
 
 .chk-container {
-  top: 37px;
+  top: 29px;
   left: 180px;
   position: absolute;
 }
 
 .osc-label {
-  top: 96px;
+  top: 98px;
   left: 164px;
   position: absolute;
   color: white;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 14px;
 }
 
 .osc-freq {
-  top: 37px;
+  top: 29px;
   left: 126px;
   position: absolute;
   color: white;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 14px;
 }
 
 .lock-label {
-  top: 38px;
+  top: 30px;
   left: 230px;
   position: absolute;
   color: white;
-  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
   font-size: 14px;
 }

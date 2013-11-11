@@ -8,12 +8,12 @@ define(['require'], function(require) {
         ui: {
             type: 'div',
             width: 410,
-            height: 136
+            height: 136,
+            html: '@@include("./template.html")',
+            css: '@@include("./style.css")'
         }
     };
-  
-  
-  
+
     var pluginFunction = function(args, resources) {
         
         this.name = args.name;

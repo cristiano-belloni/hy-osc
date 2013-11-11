@@ -1,0 +1,21 @@
+{
+  "name": "hy-osc",
+  "version": "0.1.0",
+  "description": "hy-osc ======",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/janesconference/hy-osc.git"
+  },
+  "author": "",
+  "license": "BSD",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-include-replace": "~1.1.1",
+    "grunt-contrib-cssmin": "~0.7.0",
+    "grunt-contrib-htmlmin": "~0.1.3"
+  }
+}
