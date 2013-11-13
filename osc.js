@@ -14,7 +14,7 @@ define(['require'], function(require) {
         }
     };
 
-    var pluginFunction = function(args, resources) {
+    var pluginFunction = function(args) {
         
         this.name = args.name;
         this.id = args.id;
@@ -22,11 +22,6 @@ define(['require'], function(require) {
         this.context = args.audioContext;
         
         var domEl = args.div;
-
-        var style = resources[0];
-        var html = resources[1];
-
-        domEl.innerHTML = html;
 
         var go_button = domEl.getElementsByClassName("flat-button")[0];
         go_button.addEventListener("click",function(e) {
@@ -41,27 +36,7 @@ define(['require'], function(require) {
     var initPlugin = function(initArgs) {
         var args = initArgs;
           
-        // TODO *DON'T* USE CSS HERE IN PRODUCTION      
-        var resList = [ './style.css!css',
-                        './template.html!text'
-                      ];
-
-        console.log ("requiring...");
-
-        var requireErr = function (err) {
-            args.hostInterface.setInstanceStatus ('fatal', {description: 'Error loading resources'});
-        }.bind(this);
-
-        require (resList,
-            function () {
-                console.log ("required...");
-                pluginFunction.call (this, args, arguments);
-            }.bind(this),
-            function (err) {
-                console.log ("require error");
-                requireErr (err);
-            }
-        );
+        pluginFunction.call (this, args);
     };
         
     return {
