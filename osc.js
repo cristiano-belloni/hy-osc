@@ -1,4 +1,4 @@
-define(['require'], function(require) {
+define(['require', './template.html!text', './style.css!text'], function(require, htmlTemp, cssTemp) {
   
     var pluginConf = {
         name: "Oscillator",
@@ -9,13 +9,13 @@ define(['require'], function(require) {
             type: 'div',
             width: 410,
             height: 136,
-            html: '@@include("./template.html")',
-            css: '@@include("./style.css")'
+            html: htmlTemp,
+            css: cssTemp
         }
     };
 
     var pluginFunction = function(args) {
-        
+
         this.name = args.name;
         this.id = args.id;
         this.audioDestination = args.audioDestinations[0];
