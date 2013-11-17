@@ -42,14 +42,14 @@
 
 .go-button {
   top: 37px;
-  left: 308px;
+  left: 301px;
   position: absolute;
 }
 
 .flat-button {
 	height: 34px;
-  width: 88px;
-  padding-top: 22px;
+    width: 88px;
+    padding-top: 22px;
 	font-size: 14px;
 	line-height: 100%;
 	text-shadow: 0 1px rgba(0, 0, 0, 0.4);
@@ -103,8 +103,8 @@
 }
 
 .input-helper--checkbox:before {
-    top: 28px;
-    left: 192px;
+    top: 27px;
+    left: 182px;
     width: 20px;
     height: 20px;
     background:#444;
@@ -120,7 +120,7 @@ input[type="checkbox"]:checked + label:before {
 
 .osc-label {
   top: 88px;
-  left: 164px;
+  left: 161px;
   position: absolute;
   color: white;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
@@ -140,7 +140,7 @@ input[type="checkbox"]:checked + label:before {
 
 .lock-label {
   top: 30px;
-  left: 230px;
+  left: 217px;
   position: absolute;
   color: white;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
