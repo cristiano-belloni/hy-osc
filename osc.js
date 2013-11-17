@@ -106,6 +106,11 @@ define(['require', 'github:janesconference/nu.js/nu','./template.html!text', './
 
         var main_input = domEl.getElementsByClassName("freq-field")[0];
         main_input.addEventListener("blur", inputHandler);
+        main_input.addEventListener("keypress", function (e) {
+            if(event.keyCode == 13) {
+                inputHandler(e);
+            }
+        })
 
         var lock_chk = domEl.getElementsByClassName("lock_checkbox")[0];
         lock_chk.addEventListener("change",function(e) {
