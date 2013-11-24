@@ -50,12 +50,21 @@ define(['require', 'github:janesconference/nu.js/nu','./template.html!text', './
         }
 
         this.playOsc = function (when) {
-            this.gain.gain.value = 1;
-            this.playing = true;
+            if (!when) {
+                this.gain.gain.cancelScheduledValues (this.context.currentTime);
+                //this.gain.gain = 1;
+                this.gain.gain.setValueAtTime(1, this.context.currentTime + 0.1);
+                this.playing = true;
+            }
+            else {
+                this.gain.gain.setValueAtTime(0, when);
+            }
         }
         this.stopOsc = function (when) {
             if (!when) {
-                this.gain.gain.value = 0;
+                this.gain.gain.cancelScheduledValues (this.context.currentTime);
+                //this.gain.gain = 0;
+                this.gain.gain.setValueAtTime(0, this.context.currentTime + 0.1);
                 this.playing = false;
             }
             else {
@@ -150,7 +159,7 @@ define(['require', 'github:janesconference/nu.js/nu','./template.html!text', './
             }
             if (message.type === 'noteoff') {
                 console.log ("noteoff", message, when);
-                //this.stopOsc (when);
+                this.stopOsc (when);
             }
         }.bind(this);
 
