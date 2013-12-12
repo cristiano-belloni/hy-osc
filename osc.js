@@ -23,14 +23,20 @@ define(['require', 'github:janesconference/nu.js/nu','./template.html!text', './
 
         this.oscType = {sine: 0, square: 1, saw: 2, triangle: 3};
 
-        this.note = new Note({frequency:440});
-
-        this.status = {
-            type: "sine",
-            frequency: 440,
-            detune: 0,
-            lock: false
+        if (args.initialState && args.initialState.data) {
+            /* Load data */
+            this.status = args.initialState.data;
         }
+        else {
+            this.status = {
+                type: "sine",
+                frequency: 440,
+                detune: 0,
+                lock: false
+            }
+        }
+
+        this.note = new Note({frequency:this.status.frequency});
 
         this.changeOsc = function () {
             console.log (this.osc, this.status);
@@ -165,9 +171,13 @@ define(['require', 'github:janesconference/nu.js/nu','./template.html!text', './
 
         args.MIDIHandler.setMIDICallback (this.onMIDIMessage);
 
-        // Initialization made it so far: plugin is ready.
+        var saveState = function () {
+            return { data: this.status };
+        };
+        args.hostInterface.setSaveState (saveState.bind(this));
+
         args.hostInterface.setInstanceStatus ('ready');
-    };
+    }
     
     
     var initPlugin = function(initArgs) {
