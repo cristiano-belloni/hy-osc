@@ -4,7 +4,8 @@ define(['require', 'github:janesconference/nu.js/nu','./template.html!text', './
         name: "Oscillator",
         osc: false,
         audioOut: 1,
-        version: '0.0.1-alpha1',
+        version: '0.0.1',
+	hyaId: 'Oscillator',
         ui: {
             type: 'div',
             width: 410,
