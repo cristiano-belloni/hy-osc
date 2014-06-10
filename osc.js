@@ -77,7 +77,7 @@ define(['require', 'github:janesconference/nu.js/nu','./template.html!text', './
         };
 
         this.osc = this.context.createOscillator();
-        this.gain = this.context.createGainNode();
+        this.gain = this.context.createGain();
 
         this.stopOsc();
         this.changeOsc();
